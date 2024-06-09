@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <!-- styling  -->
-    <link rel="stylesheet" href="/static/style/student_dashboard.css">
+    <link rel="stylesheet" href="/static/style/instructor.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- std dashboard script -->
-    <script src="/static/scripts/std_dashboard.js"></script>
+    <!-- Instructor dashboard script -->
+    <script src="/static/scripts/instructor.js"></script>
 </head>
 <body>
     <section class="mainPage">
@@ -53,24 +53,19 @@
             </div>
         </div>
         <div class="board">
-            <div class="courses">
-                <h2>Semester Courses</h2>
-                <div class="course">Course</div>
-            </div>
-            <div id="flash-message" class="flash-error" style="display: none;"></div>
-            <div class="nonFinishedExams">
-                <h2>Non Finished Exams</h2>
+
+            <div class="examsCreated">
+                <h2>Exams Created</h2>
                 <div class="exams">
                     <div class="exam">
                         <div class="title">
-                            <h3>ID: id</h3>
                             <h3>Exam Title</h3>
                             <p>course name</p>
                         </div>
 
                         <div class="score">
+                            <p>total</p>
                             <p>100%</p>
-                            <p>90%</p>
                         </div>
                         <div class="date">
                             <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
@@ -79,36 +74,105 @@
                         <div class="ins">
                             Ins / Mohammed
                         </div>
-                        <button class="start-exam">Start</button>
                     </div>
+                    <div class="exam">
+                        <div class="title">
+                            <h3>Exam Title</h3>
+                            <p>course name</p>
+                        </div>
+
+                        <div class="score">
+                            <p>total</p>
+                            <p>100%</p>
+                        </div>
+                        <div class="date">
+                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
+                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
+                        </div>
+                        <div class="ins">
+                            Ins / Mohammed
+                        </div>
+                    </div>
+                    <div class="exam">
+                        <div class="title">
+                            <h3>Exam Title</h3>
+                            <p>course name</p>
+                        </div>
+
+                        <div class="score">
+                            <p>total</p>
+                            <p>100%</p>
+                        </div>
+                        <div class="date">
+                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
+                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
+                        </div>
+                        <div class="ins">
+                            Ins / Mohammed
+                        </div>
+                    </div>
+                    <div class="exam">
+                        <div class="title">
+                            <h3>Exam Title</h3>
+                            <p>course name</p>
+                        </div>
+
+                        <div class="score">
+                            <p>total</p>
+                            <p>100%</p>
+                        </div>
+                        <div class="date">
+                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
+                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
+                        </div>
+                        <div class="ins">
+                            Ins / Mohammed
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="finishedExams">
-                <h2>Finished Exams</h2>
-                <div class="exams">
-                    <div class="exam">
-                        <div class="title">
-                            <h3>ID: id</h3>
-                            <h3>Exam Title</h3>
-                            <p>course name</p>
-                        </div>
-
-                        <div class="score">
-                            <p>100%</p>
-                            <p>90%</p>
-                        </div>
-                        <div class="date">
-                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
-                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
-                        </div>
-                        <div class="ins">
-                            Ins / Mohammed
-                        </div>
-                    </div>
+            <div class="createAnExam">
+                <div class="form">
+                    <form action="">
+                        <input type="text" name="title" id="exam-title" placeholder="enter exam title">
+                        <select name="course" id="course-name">
+                            <option value="">web</option>
+                            <option value="">flutter</option>
+                            <option value="">data</option>
+                            <option value="">ai</option>
+                            <option value="">devOps</option>
+                        </select>
+                        <input type="datetime-local" name="start" id="start-date">
+                        <input type="datetime-local" name="end" id="end-date">
+                        <input type="text" name="score" id="exam-score" placeholder="score">
+                        <input type="submit" value="Create New Exam" id="submit">
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+    <div class="addQuestions">
+        <h3>Add Questions</h3>
+        <div class="questionForm">
+            <div class="question">
+                <input type="text" name="question" id="question" placeholder="enter the question">
+            </div>
+            <div class="choices">
+                <input type="text" name="question1" id="question1" placeholder="choice 1">
+                <input type="text" name="question2" id="question2" placeholder="choice 2">
+                <input type="text" name="question3" id="question3" placeholder="choice 3">
+                <input type="text" name="question4" id="question4" placeholder="choice 4">
+            </div>
+            <div class="btns">
+                <button>Next Question</button>
+                <button>Submit Exam</button>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+
 </body>
 </html>

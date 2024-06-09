@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #2052a2;
+    --secondaryColor: #EEF7FF;
+    --boldFont: "Rubik", sans-serif;
+    --smallFont: "Raleway", sans-serif;
+}
+
+.mainPage {
+    width: 100%;
+    background-color: var(--secondaryColor);
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+}
+
+.mainPage .toolBar {
+    width: 14%;
+    background-color: var(--mainColor);
+    color: #EEF7FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 2px 2px 3px #b3d6f5;
+    position: fixed;
+}
+
+.mainPage .toolBar a {
+    font-size: 15px;
+    color: #EEF7FF;
+    text-decoration: none;
+}
+
+.mainPage .toolBar .logo {
+    margin: 20px 30px 35px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    color: #b3d6f5;
+    gap: 5px;
+    border-bottom: 5px solid #b3d6f5;
+    border-radius: 20px;
+    width: fit-content;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.mainPage .toolBar .logo h2 {
+    font-family: "Grand Hotel", cursive;
+    font-size: 18px;
+    color: #fff;
+}
+
+.mainPage .toolBar .boardClasses > div {
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+
+.mainPage .toolBar .boardClasses div .title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--boldFont);
+    margin: 20px 0;
+}
+
+.mainPage .toolBar .boardClasses div i {
+    font-size: 20px;
+}
+
+/* ------------------------------ */
+
+.mainPage .board {
+    margin-left: 16%;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.mainPage .board .examsCreated {
+    width: 65%;
+}
+
+.mainPage .examsCreated h2 {
+    color: var(--mainColor);
+    font-size: 25px;
+    font-family: var(--boldFont);
+    margin-bottom: 15px;
+}
+
+.mainPage .examsCreated .exams {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mainPage .examsCreated .exams .exam {
+    padding: 15px;
+    background-color: #EEF7FF;
+    box-shadow: 2px 2px 2px var(--mainColor);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid var(--mainColor);
+}
+
+.mainPage .examsCreated .exams .exam .title h3 {
+    font-size: 18px;
+    font-family: var(--boldFont);
+    color: #2052a2;
+}
+
+.mainPage .examsCreated .exams .exam .title p {
+    font-size: 18px;
+    font-family: var(--smallFont);
+    color: #2052a2;
+}
+
+.mainPage .examsCreated .exams .exam .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.mainPage .examsCreated .exams .date p {
+    margin: 10px;
+}
+
+.mainPage .examsCreated .exams .exam .score {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    align-items: center;
+    font-size: 18px;
+    font-family: var(--smallFont);
+    color: #2052a2;
+    font-weight: bold;
+}
+
+.mainPage .examsCreated .exams .exam .date {
+    font-size: 16px;
+    font-family: var(--smallFont);
+    color: #2052a2;
+}
+
+.mainPage .examsCreated .exams .exam .ins {
+    color: #002053;
+    font-family: var(--smallFont);
+    font-weight: bold;
+    border-bottom: 2px solid #002053;
+    width: fit-content;
+}
+
+.mainPage .board .createAnExam {
+    width: 35%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #002053;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-top: 10px solid #2052a2;
+    padding: 20px;
+}
+
+.mainPage .board .createAnExam .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.mainPage .board .createAnExam .form form input,
+.mainPage .board .createAnExam .form form select {
+    width: 90%;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #EEF7FF;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 2px solid #002053;
+    outline: none;
+    font-size: 18px;
+    color: #002053;
+}
+
+.mainPage .board .createAnExam .form form input[type='submit'] {
+    background-color: #2052a2;
+    color: #EEF7FF;
+    width: 70%;
+    font-size: 20px;
+    font-family: var(--boldFont);
+    box-shadow: 2px 2px 2px #2052a2;
+}
+
+body {
+    background-color: var(--secondaryColor);
+}
+
+.addQuestions {
+    background-color: #fff;
+    padding: 20px;
+    width: 60vw;
+    margin: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-left: 10px solid #2052a2;
+    color: #002053;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.addQuestions h3 {
+    color: #002053;
+    font-family: var(--boldFont);
+    font-size: 25px;
+}
+
+.addQuestions .questionForm .question input {
+    width: 90%;
+    padding: 10px 25px;
+    background-color: #b3d6f5;
+    color: #002053;
+    font-family: var(--smallFont);
+    font-size: 17px;
+    border: 1px solid #002053;
+    outline: none;
+    margin: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.addQuestions .questionForm .choices {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.addQuestions .questionForm .choices input {
+    width: 35%;
+    padding: 5px 10px;
+}
+
+.addQuestions .questionForm .btns {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.questionForm .btns button {
+    padding: 10px 20px;
+    background-color: #2052a2;
+    color: #EEF7FF;
+    border: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-size: 18px;
+}
+
+.addQuestions i {
+    font-size: 25px;
+    color: #002053;
+    position: fixed;
+    top: 25px;
+    right: 40px;
+}
+@media (max-width : 1200px) {
+    .mainPage .board .examsCreated .exams {
+        display: block;
+        width: 100%;
+    }
+
+    .mainPage .board .createAnExam {
+        width: 65%;
+    }
+
+    .mainPage .board .examsCreated .exams .exam {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width : 1000px) {
+    .mainPage .toolBar {
+        width: 20%;
+    }
+
+    .mainPage .board {
+        display: block;
+        width: 78%;
+        margin-left: 22%;
+    }
+
+    .mainPage .board .examsCreated {
+        width: 100%;
+    }
+
+    .mainPage .board .examsCreated .exams {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .mainPage .board .createAnExam {
+        width: 80%;
+        margin: auto;
+    }
+
+    .mainPage .board .examsCreated .exams .exam {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .addQuestions {
+        width: 80%;
+    }
+
+    .addQuestions .questionForm .btns {
+        width: 70%;
+    }
+}
+
+@media (max-width : 730px) {
+    .mainPage .toolBar .boardClasses h3 {
+        display: none;
+    }
+
+    .mainPage .board {
+        margin-left: 25%;
+    }
+
+    .mainPage .board .exam {
+        margin-left: -20px;
+    }
+
+    .mainPage .board .examsCreated .exams {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+@media (max-width : 600px) {
+    .mainPage .board .createAnExam {
+        width: 100%;
+    }
+}

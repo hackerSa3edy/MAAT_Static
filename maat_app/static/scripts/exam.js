@@ -200,6 +200,6 @@ $(document).ready(function () {
   });
 
   $('.terminal-button').click(function () {
-    window.open('/terminal', '_blank');
+    window.open('http://localhost:5000/terminal', '_blank');
   });
 });

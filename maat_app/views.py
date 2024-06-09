@@ -52,3 +52,7 @@ def route_exam():
         return render_template('exam.html')
     else:
         abort(403, description="Access denied. This page is for students only.")
+
+@app.route('/admin-panel')
+def route_admin_panel():
+    return make_response(redirect("http://localhost/admin"))
