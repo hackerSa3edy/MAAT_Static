@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     const username = $('#username').val();
     const password = $('#pass').val();
+    const rememberMe = $('#remember-me').is(':checked'); // Assuming the id of your checkbox is 'remember-me'
 
     $.ajax({
       url: 'http://localhost/api/auth/token/',
@@ -16,12 +17,20 @@ $(document).ready(function () {
         password: password
       }),
       success: function (token) {
-        document.cookie = `jwtAccess=${token.access}; path=/`;
-        // window.location.href = 'http://localhost/dashboard';
+        if (rememberMe) {
+          // Set cookie to expire in 7 days
+          const date = new Date();
+          date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+          const expires = '; expires=' + date.toUTCString();
+          document.cookie = `jwtAccess=${token.access}; path=/; expires=${expires}`;
+        } else {
+          // Set cookie that expires when browser is closed
+          document.cookie = `jwtAccess=${token.access}; path=/`;
+        }
         window.location.href = '/profile';
       },
-      error: function () {
-        $('#flash-message').text('Incorrect username or password.').show();
+      error: function (jqXHR, textStatus, errorThrown) {
+        $('#flash-message').text(jqXHR?.responseJSON?.detail || errorThrown || textStatus).show();
       }
     });
   });

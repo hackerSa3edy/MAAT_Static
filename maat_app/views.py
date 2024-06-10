@@ -1,5 +1,5 @@
 from config import app
-from flask import redirect, url_for,render_template, flash, get_flashed_messages, abort
+from flask import redirect, url_for,render_template, get_flashed_messages, abort, make_response
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
 
 
@@ -15,8 +15,6 @@ def route_login():
 @jwt_required(locations=['cookies'])
 def route_profile():
     return render_template('profile.html')
-
-from flask import make_response
 
 @app.route('/logout')
 @jwt_required(locations=['cookies'])
