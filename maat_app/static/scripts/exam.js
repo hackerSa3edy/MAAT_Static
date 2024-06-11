@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const BASE_URL = 'http://127.0.0.1/api/exams/';
+  const BASE_URL = 'https://maat-system.s1cario.tech/api/exams/';
   const params = new URLSearchParams(window.location.search);
   const examTitle = params.get('exam_title');
   const examId = params.get('exam_id');
@@ -132,7 +132,7 @@ $(document).ready(function () {
       $('button:contains("Previous")').prop('disabled', true).removeData('url');
     }
 
-    sendRequest('http://127.0.0.1/api/exams/answers/', 'GET', null, function (answersResponse) {
+    sendRequest('https://maat-system.s1cario.tech/api/exams/answers/', 'GET', null, function (answersResponse) {
       $.each(answersResponse.results, function (i, answer) {
         const questionDiv = $('.q1').filter(function () {
           return $(this).data('question-id') === answer.question.id;
@@ -200,6 +200,6 @@ $(document).ready(function () {
   });
 
   $('.terminal-button').click(function () {
-    window.open('http://localhost:5000/terminal', '_blank');
+    window.open('https://maat-system.s1cario.tech/terminal', '_blank');
   });
 });

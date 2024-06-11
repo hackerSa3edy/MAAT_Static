@@ -55,6 +55,7 @@
         <div class="board">
 
             <div class="examsCreated">
+
                 <h2>Exams Created</h2>
                 <div class="exams">
                     <div class="exam">
@@ -75,61 +76,8 @@
                             Ins / Mohammed
                         </div>
                     </div>
-                    <div class="exam">
-                        <div class="title">
-                            <h3>Exam Title</h3>
-                            <p>course name</p>
-                        </div>
-
-                        <div class="score">
-                            <p>total</p>
-                            <p>100%</p>
-                        </div>
-                        <div class="date">
-                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
-                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
-                        </div>
-                        <div class="ins">
-                            Ins / Mohammed
-                        </div>
-                    </div>
-                    <div class="exam">
-                        <div class="title">
-                            <h3>Exam Title</h3>
-                            <p>course name</p>
-                        </div>
-
-                        <div class="score">
-                            <p>total</p>
-                            <p>100%</p>
-                        </div>
-                        <div class="date">
-                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
-                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
-                        </div>
-                        <div class="ins">
-                            Ins / Mohammed
-                        </div>
-                    </div>
-                    <div class="exam">
-                        <div class="title">
-                            <h3>Exam Title</h3>
-                            <p>course name</p>
-                        </div>
-
-                        <div class="score">
-                            <p>total</p>
-                            <p>100%</p>
-                        </div>
-                        <div class="date">
-                            <p class="start">start : 5:45 BM  Sunday, May 19, 2024</p>
-                            <p class="end">end : 6:45 BM  Sunday, May 19, 2024</p>
-                        </div>
-                        <div class="ins">
-                            Ins / Mohammed
-                        </div>
-                    </div>
-
+                    <button type="button" class="edit_exam" exam_id="${exam.id}">Edit</button>
+                    <button type="button" class="delete_exam" exam_id="${exam.id}">Delete</button>
                 </div>
             </div>
 
@@ -161,9 +109,13 @@
             </div>
             <div class="choices">
                 <input type="text" name="question1" id="question1" placeholder="choice 1">
+                <input type="checkbox" name="correct1" id="correct1"> Is correct ?
                 <input type="text" name="question2" id="question2" placeholder="choice 2">
+                <input type="checkbox" name="correct2" id="correct2"> Is correct ?
                 <input type="text" name="question3" id="question3" placeholder="choice 3">
+                <input type="checkbox" name="correct3" id="correct3"> Is correct ?
                 <input type="text" name="question4" id="question4" placeholder="choice 4">
+                <input type="checkbox" name="correct4" id="correct4"> Is correct ?
             </div>
             <div class="btns">
                 <button>Next Question</button>

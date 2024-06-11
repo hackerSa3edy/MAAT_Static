@@ -185,7 +185,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
+
 }
 
 .mainPage .board .createAnExam .form form input,
@@ -388,4 +388,39 @@ body {
     .mainPage .board .createAnExam {
         width: 100%;
     }
+}
+.edit_exam {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.edit_exam:hover {
+    background-color: #45a049;
+}
+
+.delete_exam {
+    background-color: #c41751; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.delete_exam:hover {
+    background-color: #d32417;
 }

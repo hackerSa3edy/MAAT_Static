@@ -9,7 +9,7 @@ $(document).ready(function () {
     const rememberMe = $('#remember-me').is(':checked'); // Assuming the id of your checkbox is 'remember-me'
 
     $.ajax({
-      url: 'http://localhost/api/auth/token/',
+      url: 'https://maat-system.s1cario.tech/api/auth/token/',
       type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify({
@@ -18,14 +18,14 @@ $(document).ready(function () {
       }),
       success: function (token) {
         if (rememberMe) {
-          // Set cookie to expire in 7 days
+        // Set cookie to expire in 7 days
           const date = new Date();
           date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
           const expires = '; expires=' + date.toUTCString();
-          document.cookie = `jwtAccess=${token.access}; path=/; expires=${expires}`;
+          document.cookie = `jwtAccess=${token.access}; path=/; domain=.s1cario.tech; expires=${expires}`;
         } else {
-          // Set cookie that expires when browser is closed
-          document.cookie = `jwtAccess=${token.access}; path=/`;
+        // Set cookie that expires when browser is closed
+          document.cookie = `jwtAccess=${token.access}; path=/; domain=.s1cario.tech`;
         }
         window.location.href = '/profile';
       },
